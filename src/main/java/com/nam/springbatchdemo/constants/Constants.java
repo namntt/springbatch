@@ -3,11 +3,9 @@ package com.nam.springbatchdemo.constants;
 public class Constants {
 
     // Replace with your email here:
-    public static final String MY_EMAIL = "namntn96@gmail.com";
+    public static final String MY_EMAIL = "anomynous173@gmail.com";
 
     // Replace password!!
-    public static final String MY_PASSWORD = "traibachkhoakt2";
+    public static final String MY_PASSWORD = "NaLy@123456";
 
-    // And receiver!
-    public static final String FRIEND_EMAIL = "traibachkhoa31196@gmail.com";
 }

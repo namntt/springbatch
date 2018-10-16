@@ -62,7 +62,7 @@ public class QuartzConfig {
     public Trigger jobOneTrigger() {
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder
                 .simpleSchedule()
-                .withIntervalInSeconds(60)
+                .withIntervalInSeconds(10)
                 .repeatForever();
 
         return TriggerBuilder
@@ -77,7 +77,7 @@ public class QuartzConfig {
     public Trigger jobTwoTrigger() {
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder
                 .simpleSchedule()
-                .withIntervalInSeconds(120)
+                .withIntervalInSeconds(20)
                 .repeatForever();
 
         return TriggerBuilder

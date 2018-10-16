@@ -7,5 +7,5 @@ import java.util.List;
 public interface UserService {
     List<UserDTO> getAllUser();
 
-    void sendMail();
+    void sendMail(String email);
 }

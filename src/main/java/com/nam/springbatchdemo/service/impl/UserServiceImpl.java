@@ -38,12 +38,11 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void sendMail() {
+    public void sendMail(String email) {
         SimpleMailMessage message = new SimpleMailMessage();
-
-        message.setTo(Constants.FRIEND_EMAIL);
-        message.setSubject("Demo send mail quazt");
-        message.setText("Ahiiiiiiiiiiiiiii");
+        message.setTo(email);
+        message.setSubject("You will die");
+        message.setText("I KILL YOU!!!!");
         javaMailSender.send(message);
     }
 }
