@@ -62,7 +62,7 @@ public class QuartzConfig {
     public Trigger jobOneTrigger() {
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder
                 .simpleSchedule()
-                .withIntervalInSeconds(10)
+                .withIntervalInSeconds(60)
                 .repeatForever();
 
         return TriggerBuilder
@@ -77,7 +77,7 @@ public class QuartzConfig {
     public Trigger jobTwoTrigger() {
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder
                 .simpleSchedule()
-                .withIntervalInSeconds(20)
+                .withIntervalInSeconds(120)
                 .repeatForever();
 
         return TriggerBuilder
@@ -92,7 +92,7 @@ public class QuartzConfig {
     public SchedulerFactoryBean schedulerFactoryBean() throws IOException,SchedulerException {
         SchedulerFactoryBean scheduler = new SchedulerFactoryBean();
         scheduler.setTriggers(jobOneTrigger(), jobTwoTrigger());
-        scheduler.setQuartzProperties(quartzProperties());
+//        scheduler.setQuartzProperties(quartzProperties());
         scheduler.setJobDetails(jobOneDetail(), jobTwoDetail());
         scheduler.setApplicationContextSchedulerContextKey("applicationContext");
         return scheduler;
